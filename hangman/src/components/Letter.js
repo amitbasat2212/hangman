@@ -7,7 +7,7 @@ class Letter extends Component {
         
         return (            
            
-            <span>{this.props.letter}&nbsp;</span>
+            <span className={this.props.className}>{this.props.letter}&nbsp;</span>
             
             
         )

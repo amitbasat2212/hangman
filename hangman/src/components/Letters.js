@@ -8,7 +8,7 @@ class Letters extends Component {
         return (            
            <div>
            <p>Avilable letters</p>
-            {Object.keys(this.props.letterStatus).map((k) =><Letter letter={k}/>)}
+            {Object.keys(this.props.letterStatus).map((k) => this.props.letterStatus[k.toUpperCase()]?<Letter className="wipe" letter={k}/>:<Letter className="in" letter={k}/>)}
             
             </div>
             
