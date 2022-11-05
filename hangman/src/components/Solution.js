@@ -1,15 +1,19 @@
 
 import React, { Component } from 'react';
-
+import Letter from './Letter'
 
 class Solution extends Component {
     render() {
-        const n = 4; 
+        
         return (            
            <div>
-            {[...Array(n)].map(() => <span className='spaces'>-</span>)}
+            
+            <div>                
+                <em>{this.props.solution.hint}</em>
+            </div>
             <div>
-                <em>your edeal mood when coding</em>
+                
+                {this.props.solution.word.split('').map((k) =>this.props.letterStatus[k.toUpperCase()]?<Letter letter={k}/>:<Letter letter="-"/>)}
             </div>
             </div>
             

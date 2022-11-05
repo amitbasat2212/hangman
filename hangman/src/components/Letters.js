@@ -8,7 +8,8 @@ class Letters extends Component {
         return (            
            <div>
            <p>Avilable letters</p>
-           <Letter/>
+            {Object.keys(this.props.letterStatus).map((k) =><Letter letter={k}/>)}
+            
             </div>
             
         )
