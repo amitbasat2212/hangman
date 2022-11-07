@@ -15,10 +15,10 @@ class App extends Component {
             letterStatus : this.generateLetterStatuses() ,       
             
             solution:{
-                "word":"amit",
+                "word":"AMIT",
                 "hint":"the name every one want"
             },
-            score:"100"
+            score:100
         }
     }
 
@@ -41,9 +41,12 @@ class App extends Component {
     selectLetter=(letter)=>{       
       const allleters = {...this.state.letterStatus};
       
-      allleters[letter]=true;     
+      allleters[letter]=true;  
+      const scoreYouGot = this.updatescorebyletter(letter);
+      const score= this.state.score+scoreYouGot;  
       this.setState({
-        letterStatus:allleters
+        letterStatus:allleters,
+        score:score
       })  
         
     }
