@@ -7,7 +7,11 @@ class Score extends Component {
          
         return (            
            <div>            
-            <div>{this.props.Score}</div>            
+            <div>
+                {this.props.Score>=80?<div className='high-score'>{this.props.Score}</div>
+                :this.props.Score>=50 && this.props.Score<80?<div className='medium-score'>{this.props.Score}</div>
+                :<div className='low-score'>{this.props.Score}</div>}
+            </div>            
             </div>
             
         )

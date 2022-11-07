@@ -9,6 +9,17 @@
      
 }
 
+.high-score{
+    color: greenyellow;
+}
+
+.medium-score{
+    color:orange
+}
+.low-score{
+    color: red;
+}
+
 
 
 
